@@ -29,10 +29,12 @@ class App extends Component {
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     })
     return !robots.length ?
-      <h1>Loading</h1> :
+      <h2>Loading</h2> :
       (
         <div className='tc'>
-          <h1 className='f1'>ROBOFRIENDS</h1>
+          <h1 className='ba b--solid'>
+          <div>ROBOFRIENDS</div>
+          </h1>
           <SearchBox searchChange={this.onSearchChange}/>
           <Scroll>
             <CardList robots={filteredRobots} />
